@@ -8,6 +8,6 @@ class ClassName
 
   def add_student(student)
     @students.push(student)
-    student.owner = self
+    students.classroom = self
   end
 end
