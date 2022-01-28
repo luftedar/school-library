@@ -14,10 +14,12 @@ class Person
     @rentals = []
   end
 
-  private
+  def validate_name
+    @name = @corrector.correct_name(@name)
+  end
 
-  def of_age?
-    @age >= 18
+  def add_rentals(date, book)
+    Rental.new(date, book, self)
   end
 
   public
@@ -26,11 +28,9 @@ class Person
     of_age? || parent_permission
   end
 
-  def validate_name
-    @name = @corrector.correct_name(@name)
-  end
+  private
 
-  def add_rentals(date, book)
-    Rental.new(date, book, self)
+  def of_age?
+    @age >= 18
   end
 end
