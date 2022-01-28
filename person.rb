@@ -1,4 +1,5 @@
 require './corrector'
+require './rental'
 
 class Person
   attr_reader :id
