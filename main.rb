@@ -4,6 +4,7 @@ require_relative 'rental'
 require_relative 'book'
 require_relative 'teacher'
 require_relative 'classroom'
+require 'pry'
 
 class App
   def initialize
@@ -95,7 +96,7 @@ class App
     name = gets.chomp
 
     print 'Has parent permission? [Y/N]: '
-    parent_permission = gets.chomp.downcase
+    parent_permissions = gets.chomp.downcase
 
     student = Student.new(age: age, name: name, parent_permission: parent_permission, classroom: @classroom)
     @people.push(student)
@@ -107,6 +108,7 @@ class App
   def create_teacher
     print 'Age: '
     age = gets.chomp.to_i
+    binding.pry
 
     print 'Name: '
     name = gets.chomp
