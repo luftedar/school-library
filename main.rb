@@ -20,6 +20,7 @@ class App
       print 'Please Select an Option to Proceed: '
       option = gets.chomp
       break if option == '7'
+
       option_output option
     end
 
@@ -59,13 +60,13 @@ class App
   end
 
   def list_all_books
-    puts 'There is no book. Please Add a Book!' if @books.length == 0
+    puts 'There is no book. Please Add a Book!' if @books.length.zero?
     @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
     sleep 1
   end
 
   def list_all_people
-    puts 'There is no person. Please Add a Person!' if @people.length == 0
+    puts 'There is no person. Please Add a Person!' if @people.length.zero?
     @people.map { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
     sleep 1
   end
@@ -113,7 +114,7 @@ class App
     print 'Specialization: '
     specialization = gets.chomp
 
-    teacher = Teacher.new(specialization: specialization, age: age, name: age)
+    teacher = Teacher.new(specialization: specialization, age: age, name: name)
     @people.push(teacher)
 
     puts 'Teacher created successfully'
@@ -164,8 +165,8 @@ class App
 end
 
 def main
-    app = App.new
-    app.execute
+  app = App.new
+  app.execute
 end
 
 main
