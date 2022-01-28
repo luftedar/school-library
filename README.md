@@ -4,8 +4,7 @@
 
 > Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them. The app that you will create will allow a you to, add new students or teachers, add new books, save records of who borrowed a given book and when. And all of this will be built in a beautiful and well-organized way!
 
-
-
+![screenshot](./app_screenshot.png)
 
 ## Built With
 
@@ -39,6 +38,11 @@ Install bundle
 
 ```
 bundle install
+```
+
+Run main file
+```
+ruby main.rb
 ```
 
 Run following to check linter errors:
