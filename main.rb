@@ -17,9 +17,9 @@ class App
 
     loop do
       main_options
+      print 'Please Select an Option to Proceed: '
       option = gets.chomp
       break if option == '7'
-
       option_output option
     end
 
@@ -36,6 +36,7 @@ class App
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given person id'
     puts '7 - Exit'
+    puts '*******************'
   end
 
   def option_output(option)
@@ -58,12 +59,15 @@ class App
   end
 
   def list_all_books
-    @books.each { |book| puts book }  
+    puts 'There is no book. Please Add a Book!' if @books.length == 0
+    @books.each { |book| puts book } 
+    sleep 1
     end
 
   def list_all_people
-    # puts 'There are no people yet! Kindly add a student or teacher.' if @people.empty?
+    puts 'There is no person. Please Add a Person!' if @people.length == 0
     @people.map { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+    sleep 1
   end
 
   def create_person
