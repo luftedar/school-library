@@ -90,8 +90,8 @@ class App
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase
 
-    student = Student.new(@class, age, name, parent_permission)
-    @people << student
+    student = Student.new(age: age, name: name, parent_permission: parent_permission, classroom: @classroom)
+    @people.push(student)
 
     puts 'Student created successfully'
   end
@@ -106,7 +106,7 @@ class App
     print 'Specialization: '
     specialization = gets.chomp
 
-    teacher = Teacher.new(specialization, age, name)
+    teacher = Teacher.new(specialization: specialization, age: age, name: age)
     @people << teacher
 
     puts 'Teacher created successfully'
@@ -142,8 +142,7 @@ class App
     date = gets.chomp.to_s
 
     rental = Rental.new(date, @people[person_id], @books[book_id])
-    @rentals << rental
-
+    @rentals.push(rental)
     puts 'Rental created successfully'
   end
 
