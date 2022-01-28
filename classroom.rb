@@ -1,15 +1,15 @@
 require_relative 'student'
 
-class ClassName
+class Classroom
   attr_accessor :label, :students
 
-  def initialize(label)
+  def intitialize(label)
     @label = label
     @students = []
   end
 
   def add_student(student)
-    @students.push(student)
-    students.classroom = self
+    @student.push(student) unless @students.include?(student)
+    student.classroom = self
   end
 end
