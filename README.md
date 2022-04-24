@@ -1,56 +1,69 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# School Library
 
-> Description the project.
+> Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them. The app that you will create will allow a you to, add new students or teachers, add new books, save records of who borrowed a given book and when. And all of this will be built in a beautiful and well-organized way!
 
+![screenshot](./app_screenshot.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- Ruby
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+Clone this repository:
 
-### Setup
+```
+git clone https://github.com/luftedar/school-library.git
+```
 
-### Install
 
-### Usage
+cd into folder:
 
-### Run tests
+```
+cd schoold-library
+```
 
-### Deployment
+To get started, run following in the root directory:
 
+```
+gem install bundler
+```
+
+Install bundle
+
+```
+bundle install
+```
+
+Run main file
+```
+ruby main.rb
+```
+
+Run following to check linter errors:
+
+```
+rubocop
+```
+
+Auto fix the errors if available
+
+```
+rubocop -A
+```
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Orçun Uğur**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/luftedar)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/orcunugur)
 
 ## 🤝 Contributing
 
@@ -64,9 +77,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- This project is built in Microverse's fourth module's second week.
 
 ## 📝 License
 
